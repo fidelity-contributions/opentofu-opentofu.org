@@ -38,7 +38,7 @@ export const SERVICE_SPONSORS = [
     logoLight: "/img/supporters/buildkite-light.svg",
     logoDark: "/img/supporters/buildkite-dark.svg",
     url: "https://buildkite.com/",
-    contribution: "Package hosting via Package Cloud",
+    contribution: "Package hosting",
   },
   {
     name: "Cloudflare",
