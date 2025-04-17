@@ -7,7 +7,7 @@ export default function HowToContribute() {
       <div className="w-full max-w-4xl mx-auto leading-snug">
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Content */}
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 text-center md:text-left">
             <h2 className="text-3xl md:text-4xl mb-6 font-bold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
               Join Our Community
             </h2>
@@ -16,7 +16,7 @@ export default function HowToContribute() {
               bugs, adding features, improving docs, or providing feedback, your
               input makes a difference.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
               <Button
                 variant="primary"
                 href="https://opentofu.org/slack"

@@ -33,6 +33,21 @@ function SupporterLogo({ supporter }) {
   );
 }
 
+function CommunityContributorsTile() {
+  return (
+    <div className="bg-white dark:bg-blue-900/30 shadow-md rounded-xl p-6 border border-gray-100 dark:border-blue-800/50 flex items-center justify-center h-24 w-48">
+      <div className="text-center">
+        <span className="text-3xl font-bold text-gray-800 dark:text-gray-200">
+          +200 {/* TODO: Get actual number */}
+        </span>
+        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+          Community Contributors
+        </p>
+      </div>
+    </div>
+  );
+}
+
 export default function Supporters() {
   return (
     <section className="py-20 md:py-28 mx-auto container px-4">
@@ -46,19 +61,14 @@ export default function Supporters() {
         <h3 className="text-2xl font-semibold text-center mb-8">
           Engineering Contributors
         </h3>
-        <div className="relative overflow-hidden">
-          <div className="whitespace-nowrap flex items-center py-4 animate-scroll">
-            {/* Show contributors twice for continuous scrolling effect */}
-            {[...ENGINEERING_CONTRIBUTORS, ...ENGINEERING_CONTRIBUTORS].map(
-              (supporter, idx) => (
-                <div
-                  key={`${supporter.name}-${idx}`}
-                  className="inline-block mx-6"
-                >
-                  <SupporterLogo supporter={supporter} />
-                </div>
-              ),
-            )}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center max-w-6xl mx-auto">
+          {ENGINEERING_CONTRIBUTORS.map((supporter) => (
+            <div key={supporter.name}>
+              <SupporterLogo supporter={supporter} />
+            </div>
+          ))}
+          <div>
+            <CommunityContributorsTile />
           </div>
         </div>
       </div>
