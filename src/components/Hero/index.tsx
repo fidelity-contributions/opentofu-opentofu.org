@@ -39,6 +39,11 @@ export default function Hero() {
               OpenTofu is a reliable, flexible, community-driven infrastructure
               as code tool managed by the Linux Foundation.
             </p>
+            <p className="mb-8 text-xl text-gray-600 dark:text-gray-400">
+              With a rich ecosystem of providers and modules, OpenTofu enables
+              you to manage infrastructure across multiple cloud providers and
+              services.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button variant="primary" href="/docs/intro">
                 Get Started
