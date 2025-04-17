@@ -6,14 +6,15 @@ import CopyIcon from "./CopyIcon";
 import CheckIcon from "./CheckIcon";
 import DefaultFileIcon from "./DefaultFileIcon";
 
-interface TerminalHeaderProps {
+interface IDEHeaderProps {
   filename?: string;
 }
 
-function TerminalHeader({ filename = "main.tf" }: TerminalHeaderProps) {
-  const { colorMode } = useColorMode();
+const tfFileExtensions = [".tf", ".tfvars", ".tofu"];
 
-  const isTofuFile = filename?.endsWith(".tf") || filename?.endsWith(".tfvars");
+function IDEHeader({ filename = "main.tf" }: IDEHeaderProps) {
+  const { colorMode } = useColorMode();
+  const isTofuFile = tfFileExtensions.some((ext) => filename.endsWith(ext));
 
   return (
     <div
@@ -51,7 +52,7 @@ export function IDE({ code, language = "hcl", filename }: IDEProps) {
 
   return (
     <div className="w-full rounded-lg overflow-hidden shadow-xl">
-      <TerminalHeader filename={filename} />
+      <IDEHeader filename={filename} />
       <div className="relative overflow-x-auto">
         <button
           onClick={copyToClipboard}
