@@ -39,38 +39,19 @@ export default function HowToContribute() {
             <div className="bg-white dark:bg-blue-900/40 p-6 rounded-xl shadow-md border border-gray-100 dark:border-blue-800/50">
               <h3 className="font-semibold text-xl mb-4">Get Involved</h3>
               <ul className="space-y-3">
-                <li className="flex items-start">
-                  <span className="inline-flex items-center justify-center w-6 h-6 mr-2 rounded-full bg-blue-100 dark:bg-blue-800/50 text-blue-600 dark:text-blue-300 text-sm">
-                    1
-                  </span>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Join GitHub discussions to share ideas
-                  </p>
-                </li>
-                <li className="flex items-start">
-                  <span className="inline-flex items-center justify-center w-6 h-6 mr-2 rounded-full bg-blue-100 dark:bg-blue-800/50 text-blue-600 dark:text-blue-300 text-sm">
-                    2
-                  </span>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Open issues for bugs or feature suggestions
-                  </p>
-                </li>
-                <li className="flex items-start">
-                  <span className="inline-flex items-center justify-center w-6 h-6 mr-2 rounded-full bg-blue-100 dark:bg-blue-800/50 text-blue-600 dark:text-blue-300 text-sm">
-                    3
-                  </span>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Participate in RFC discussions and reviews
-                  </p>
-                </li>
-                <li className="flex items-start">
-                  <span className="inline-flex items-center justify-center w-6 h-6 mr-2 rounded-full bg-blue-100 dark:bg-blue-800/50 text-blue-600 dark:text-blue-300 text-sm">
-                    4
-                  </span>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Contribute code after community discussion
-                  </p>
-                </li>
+                {[
+                  "Join GitHub discussions to share ideas",
+                  "Open issues for bugs or feature suggestions",
+                  "Participate in RFC discussions and reviews",
+                  "Contribute code after community discussion",
+                ].map((text, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="inline-flex items-center justify-center w-6 h-6 mr-2 rounded-full bg-blue-100 dark:bg-blue-800/50 text-blue-600 dark:text-blue-300 text-sm">
+                      {index + 1}
+                    </span>
+                    <p className="text-gray-600 dark:text-gray-400">{text}</p>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
