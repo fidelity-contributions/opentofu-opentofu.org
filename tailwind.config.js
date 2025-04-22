@@ -63,7 +63,7 @@ module.exports = {
     },
     spacing: {
       'ps-xs': '4px',
-      'ps-sm': '8px'
+      'ps-sm': '8px',
       'ps-md': '16px',
       'ps-lg': '24px',
       'ps-xl': '32px',
