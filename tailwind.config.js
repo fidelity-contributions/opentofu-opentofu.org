@@ -1,3 +1,16 @@
+/**
+ * Tailwind CSS configuration file.
+ *
+ * @type {import('tailwindcss').Config}
+ * @property {Object} theme.spacing - Defines custom spacing utilities.
+ * @property {string} theme.spacing.ps-xs - Extra small spacing (4px).
+ * @property {string} theme.spacing.ps-sm - Small spacing (8px).
+ * @property {string} theme.spacing.ps-md - Medium spacing (16px).
+ * @property {string} theme.spacing.ps-lg - Large spacing (24px).
+ * @property {string} theme.spacing.ps-xl - Extra large spacing (32px).
+ * @property {string} theme.spacing.ps-2xl - 2x extra large spacing (40px).
+ * @property {string} theme.spacing.ps-3xl - 3x extra large spacing (48px).
+ */
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
@@ -47,6 +60,15 @@ module.exports = {
       screens: {
         xs: { max: "576px" },
       },
+    },
+    spacing: {
+      'ps-xs': '4px',
+      'ps-sm': '8px'
+      'ps-md': '16px',
+      'ps-lg': '24px',
+      'ps-xl': '32px',
+      'ps-2xl': '40px',
+      'ps-3xl': '48px',
     },
     fontFamily: {
       sans: ['"DM Sans"', "system-ui"],
