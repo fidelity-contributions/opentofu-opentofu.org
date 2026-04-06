@@ -148,13 +148,9 @@ const config: Config = {
           },
           routeBasePath: "/docs",
           editUrl: ({ version, docPath }) => {
-            // Remove the edit link from the documentation index page
-            // TODO: remove after moving the page to the main OpenTofu repo
-            if (docPath === "index.mdx") {
-              return `https://github.com/opentofu/opentofu.org/edit/${version}/docs/${docPath}`;
-            }
+            const branch = version == "current" ? "v1.11" : version;
 
-            return `https://github.com/opentofu/opentofu/edit/${version}/website/docs/${docPath}`;
+            return `https://github.com/opentofu/opentofu/edit/${branch}/website/docs/${docPath}`;
           },
         },
       } satisfies Preset.Options,
