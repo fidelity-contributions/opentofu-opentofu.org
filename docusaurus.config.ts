@@ -3,7 +3,7 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import tailwind from "tailwindcss";
 import autoprefixer from "autoprefixer";
-
+import versions from "./versions.json";
 
 const config: Config = {
   title: "OpenTofu",
@@ -148,7 +148,7 @@ const config: Config = {
           },
           routeBasePath: "/docs",
           editUrl: ({ version, docPath }) => {
-            const branch = version == "current" ? "v1.11" : version;
+            const branch = version == "current" ? versions[0] : version;
 
             return `https://github.com/opentofu/opentofu/edit/${branch}/website/docs/${docPath}`;
           },
